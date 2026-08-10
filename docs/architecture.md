@@ -38,4 +38,41 @@ Main Features:
  6.Chat
  7.Save code 
  8.Run code
-      
+-------------------------------------------------------------------------------
+DAY 2
+---
+
+# Day 2 — HTML Foundation
+
+## Today's Goal
+
+Today we started implementing the **Frontend** part of CodeSync.
+
+We learned the basics of **HTML (HyperText Markup Language)** and created the initial structure of our CodeSync webpage.
+
+## What We Learned
+
+HTML is used to create the **structure of a webpage**.
+
+### Important HTML Elements
+
+- `<html>` — Root of the webpage
+- `<head>` — Contains information about the webpage
+- `<title>` — Sets the browser tab title
+- `<body>` — Contains the visible webpage content
+- `<header>` — Defines the top section
+- `<main>` — Defines the main content
+- `<section>` — Groups related content
+- `<h1>` — Main heading
+- `<h2>` — Section heading
+- `<p>` — Paragraph/text
+- `<button>` — Creates a button
+- `<footer>` — Defines the bottom section
+
+## Frontend Implementation
+
+We created our first frontend file:
+
+```text
+frontend/
+└── index.html
