@@ -76,3 +76,33 @@ We created our first frontend file:
 ```text
 frontend/
 └── index.html
+
+# Day 3 - CSS
+## Day 3 - CSS
+
+Today we learned the basics of CSS and used it to style the CodeSync landing page.
+
+### CSS Topics Learned
+
+1. CSS Syntax
+2. CSS Selectors
+3. Colors
+4. Fonts and Text Styling
+5. Margin
+6. Padding
+7. Borders
+8. Border Radius
+9. Flexbox
+10. Button Styling
+11. Hover Effects
+12. Feature Cards
+13. Basic Responsive Layout using Flexbox
+
+### CSS Syntax
+
+The basic CSS structure is:
+
+```css
+selector {
+    property: value;
+}
