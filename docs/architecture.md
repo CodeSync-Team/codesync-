@@ -106,3 +106,89 @@ The basic CSS structure is:
 selector {
     property: value;
 }
+# Day 3 & Day 4 – CodeSync Development Progress
+
+## 🎨 Day 3 – CSS & UI Development
+
+### What We Did
+- Designed the CodeSync landing page using HTML and CSS.
+- Created the Hero section.
+- Added CodeSync title and project description.
+- Added the Create Workspace button.
+- Created feature cards for:
+  - 👥 Real-Time Collaboration
+  - 💻 Online Code Editor
+  - ▶️ Code Execution
+  - 🤖 AI Assistant
+- Applied CSS for layout, spacing, typography, buttons and cards.
+- Created the initial CodeSync UI design.
+
+### Technologies Used
+- HTML5
+- CSS3
+
+### Day 3 Result
+
+CodeSync Landing Page
+        ↓
+Hero Section
+        ↓
+Create Workspace Button
+        ↓
+Feature Cards
+
+
+## ⚡ Day 4 – JavaScript & Interactivity
+
+### What We Did
+- Learned JavaScript variables using let and const.
+- Created JavaScript functions.
+- Connected JavaScript with HTML using the DOM.
+- Used querySelector() to select HTML elements.
+- Used addEventListener() to handle button clicks.
+- Implemented the Create Workspace functionality.
+- Displayed the message "Workspace Created: CodeSync" on the webpage.
+- Added a basic code editor using textarea.
+- Added a Run Code button.
+- Read user-entered code using .value.
+- Created an output area to display results.
+- Added basic error handling using try...catch.
+- Tested JavaScript code execution and error messages.
+
+### Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+### Day 4 Result
+
+User
+ ↓
+CodeSync Website
+ ↓
+Create Workspace
+ ↓
+Workspace Opens
+ ↓
+Code Editor
+ ↓
+User Enters Code
+ ↓
+Run Code
+ ↓
+JavaScript
+ ↓
+Output / Error
+
+
+### Important Note
+
+The current code execution using eval() is only for learning and testing. It will not be used in the final production version.
+
+Secure code execution, backend integration, database integration and real-time collaboration using WebSocket will be implemented in later stages.
+
+### Development Status
+
+✅ Day 3 – CSS & UI completed
+
+✅ Day 4 – JavaScript & Basic Interactivity completed

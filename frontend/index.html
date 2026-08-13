@@ -25,46 +25,61 @@
                 Write, collaborate and run code together.
             </p>
 
-            <button>Create Workspace</button>
+            <button id="createWorkspaceBtn">Create Workspace</button>
+            <p id="WorkspaceMessage"></p>
+            <div id="workspace" class="workspace">
+
+                <h3>Code Editor</h3>
+
+                <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+
+                <button id="runCodeBtn">▶ Run Code</button>
+
+                <div id="output">
+                    <h3>Output</h3>
+                    <pre id="codeOutput"></pre>
+                </div>
+
+            </div>
         </section>
         <section class="features">
 
-    <div class="card">
-        <h3>👥 Real-Time Collaboration</h3>
-        <p>
-            Work on the same code with your team in real time.
-        </p>
-    </div>
+            <div class="card">
+                <h3>👥 Real-Time Collaboration</h3>
+                <p>
+                    Work on the same code with your team in real time.
+                </p>
+            </div>
 
-    <div class="card">
-        <h3>💻 Online Code Editor</h3>
-        <p>
-            Write and manage your code directly in the browser.
-        </p>
-    </div>
+            <div class="card">
+                <h3>💻 Online Code Editor</h3>
+                <p>
+                    Write and manage your code directly in the browser.
+                </p>
+            </div>
 
-    <div class="card">
-        <h3>▶️ Code Execution</h3>
-        <p>
-            Run your code and view the output instantly.
-        </p>
-    </div>
+            <div class="card">
+                <h3>▶️ Code Execution</h3>
+                <p>
+                    Run your code and view the output instantly.
+                </p>
+            </div>
 
-    <div class="card">
-        <h3>🤖 AI Assistant</h3>
-        <p>
-            Get help with debugging, explanations and tests.
-        </p>
-    </div>
+            <div class="card">
+                <h3>🤖 AI Assistant</h3>
+                <p>
+                    Get help with debugging, explanations and tests.
+                </p>
+            </div>
 
-</section>
+        </section>
 
     </main>
 
     <footer>
         <p>© 2026 CodeSync</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

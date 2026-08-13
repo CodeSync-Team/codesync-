@@ -63,3 +63,35 @@ footer{
     color:#94a3b8;
     border-top:1px solid #334155;
 }
+
+.workspace {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background: #111827;
+}
+
+#codeEditor {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#runCodeBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+#codeOutput {
+    padding: 15px;
+    min-height: 50px;
+}
