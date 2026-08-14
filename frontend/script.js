@@ -1,73 +1,109 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-const projectName = "CodeSync";
-const language = "JavaScript";
-const isCollaborative = true;
+    // Project information
+    const projectName = "CodeSync";
+    const language = "JavaScript";
+    const isCollaborative = true;
+    const teamMembers = 3;
 
-let teamMembers = 3;
+    // Get elements from HTML
+    const createWorkspaceBtn =
+        document.getElementById("createWorkspaceBtn");
+
+    const workspaceMessage =
+        document.getElementById("workspaceMessage");
+
+    const workspace =
+        document.getElementById("workspace");
+
+    const codeEditor =
+        document.getElementById("codeEditor");
+
+    const runCodeBtn =
+        document.getElementById("runCodeBtn");
+
+    const codeOutput =
+        document.getElementById("codeOutput");
 
 
-// Function to create a workspace
-function createWorkspace(workspaceName) {
-    console.log("Workspace created: " + workspaceName);
-    const WorkspaceMessage = document.querySelector("#WorkspaceMessage");
-    WorkspaceMessage.textContent = "Workspace Created :" + " " +  workspaceName;
-}
+    // Check whether elements are found
+    console.log("Create Workspace Button:", createWorkspaceBtn);
+    console.log("Workspace:", workspace);
 
 
-// Get the Create Workspace button
-const createWorkspaceBtn = document.querySelector("#createWorkspaceBtn");
+    // Hide workspace when page loads
+    workspace.style.display = "none";
 
 
-// When the user clicks the button
-createWorkspaceBtn.addEventListener("click", function()
-{
+    // Create Workspace button
+    createWorkspaceBtn.addEventListener("click", function () {
 
-    createWorkspace("CodeSync");
-}
-);
+        console.log("Create Workspace button clicked");
 
-// Get workspace elements
+        workspace.style.display = "block";
 
-const workspace = document.querySelector("#workspace");
+        workspaceMessage.textContent =
+            "Workspace Created: " + projectName;
 
-const codeEditor = document.querySelector("#codeEditor");
+    });
 
-const runCodeBtn = document.querySelector("#runCodeBtn");
 
-const codeOutput = document.querySelector("#codeOutput");
-// Run the code
-
-runCodeBtn.addEventListener("click", function () {
-
+    // Run Code button
+   runCodeBtn.addEventListener("click", function () {
     const code = codeEditor.value;
 
-    try {
+    codeOutput.textContent = "";
 
+    const oldLog = console.log;
+
+    console.log = function (message) {
+        codeOutput.textContent += message + "\n";
+    };
+
+    try {
         const result = eval(code);
 
-        codeOutput.textContent = result;
-
+        if (result !== undefined) {
+            codeOutput.textContent += result;
+        }
     } catch (error) {
-
         codeOutput.textContent = "Error: " + error.message;
-
     }
 
+    console.log = oldLog;
 });
 
 
-// Hide workspace initially
+    // Team members
+    const teamMembersList = [
+        "Gopika",
+        "Elakiya",
+        "Swathika"
+    ];
 
-workspace.style.display = "none";
+
+    // Project files
+    const files = [
+        "index.html",
+        "style.css",
+        "script.js"
+    ];
 
 
-// Open workspace when button is clicked
+    // Workspace information
+    const workspaceInfo = {
+        name: "CodeSync",
+        language: language,
+        members: teamMembers,
+        isCollaborative: isCollaborative
+    };
 
-createWorkspaceBtn.addEventListener("click", function () {
 
-    createWorkspace("CodeSync");
-
-    workspace.style.display = "block";
+    // Console information
+    console.log("Project:", projectName);
+    console.log("Language:", language);
+    console.log("Team Members:", teamMembersList);
+    console.log("Files:", files);
+    console.log("Workspace:", workspaceInfo);
 
 });
-
