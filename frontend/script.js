@@ -1,12 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Project information
+    // ===============================
+    // Project Information
+    // ===============================
+
     const projectName = "CodeSync";
     const language = "JavaScript";
     const isCollaborative = true;
     const teamMembers = 3;
 
-    // Get elements from HTML
+
+    // ===============================
+    // Get HTML Elements
+    // ===============================
+
     const createWorkspaceBtn =
         document.getElementById("createWorkspaceBtn");
 
@@ -26,16 +33,74 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("codeOutput");
 
 
-    // Check whether elements are found
-    console.log("Create Workspace Button:", createWorkspaceBtn);
-    console.log("Workspace:", workspace);
+    // ===============================
+    // Day 6 - File Explorer
+    // ===============================
+
+    const fileButtons =
+        document.querySelectorAll(".file-btn");
 
 
-    // Hide workspace when page loads
+    // Code displayed when a file is selected
+
+    const fileContents = {
+
+        "index.html": `<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeSync</title>
+</head>
+<body>
+    <h1>Welcome to CodeSync</h1>
+</body>
+</html>`,
+
+        "style.css": `body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}`,
+
+        "script.js": `console.log("Hello from CodeSync");`
+    };
+
+
+    // ===============================
+    // File Selection
+    // ===============================
+
+    fileButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedFile =
+                button.dataset.file;
+
+            codeEditor.value =
+                fileContents[selectedFile];
+
+            codeOutput.textContent = "";
+
+            console.log("Opened file:", selectedFile);
+
+        });
+
+    });
+
+
+    // ===============================
+    // Hide Workspace Initially
+    // ===============================
+
     workspace.style.display = "none";
 
 
-    // Create Workspace button
+    // ===============================
+    // Create Workspace
+    // ===============================
+
     createWorkspaceBtn.addEventListener("click", function () {
 
         console.log("Create Workspace button clicked");
@@ -48,33 +113,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Run Code button
-   runCodeBtn.addEventListener("click", function () {
-    const code = codeEditor.value;
+    // ===============================
+    // Run Code
+    // ===============================
 
-    codeOutput.textContent = "";
+    runCodeBtn.addEventListener("click", function () {
 
-    const oldLog = console.log;
+        const code = codeEditor.value;
 
-    console.log = function (message) {
-        codeOutput.textContent += message + "\n";
-    };
+        codeOutput.textContent = "";
 
-    try {
-        const result = eval(code);
+        const oldLog = console.log;
 
-        if (result !== undefined) {
-            codeOutput.textContent += result;
+        console.log = function (message) {
+
+            codeOutput.textContent +=
+                message + "\n";
+
+        };
+
+
+        try {
+
+            const result = eval(code);
+
+            if (result !== undefined) {
+
+                codeOutput.textContent += result;
+
+            }
+
+        } catch (error) {
+
+            codeOutput.textContent =
+                "Error: " + error.message;
+
         }
-    } catch (error) {
-        codeOutput.textContent = "Error: " + error.message;
-    }
-
-    console.log = oldLog;
-});
 
 
-    // Team members
+        console.log = oldLog;
+
+    });
+
+
+    // ===============================
+    // Team Members
+    // ===============================
+
     const teamMembersList = [
         "Gopika",
         "Elakiya",
@@ -82,7 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    // Project files
+    // ===============================
+    // Project Files
+    // ===============================
+
     const files = [
         "index.html",
         "style.css",
@@ -90,16 +178,24 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    // Workspace information
+    // ===============================
+    // Workspace Information
+    // ===============================
+
     const workspaceInfo = {
-        name: "CodeSync",
+
+        name: projectName,
         language: language,
         members: teamMembers,
         isCollaborative: isCollaborative
+
     };
 
 
-    // Console information
+    // ===============================
+    // Console Information
+    // ===============================
+
     console.log("Project:", projectName);
     console.log("Language:", language);
     console.log("Team Members:", teamMembersList);

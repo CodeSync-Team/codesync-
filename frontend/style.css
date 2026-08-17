@@ -95,3 +95,32 @@ footer{
     padding: 15px;
     min-height: 50px;
 }
+
+/* Day 6 - File Explorer */
+
+.file-explorer {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #111827;
+    border-radius: 12px;
+}
+
+.file-explorer h3 {
+    margin-bottom: 15px;
+}
+
+.file-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1e293b;
+}
+
+.file-btn:hover {
+    background-color: #334155;
+} 

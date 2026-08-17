@@ -273,3 +273,93 @@ Secure code execution through the backend will be implemented in later stages.
 ✅ Day 4 – JavaScript & Basic Interactivity completed
 
 ✅ Day 5 – Code Execution & Output Handling completed
+
+# Day 6 – CodeSync Development Progress
+
+## 📁 Day 6 – File Explorer & File Selection
+
+### What We Did
+- Added a File Explorer to the CodeSync workspace.
+- Added file buttons for:
+  - 📄 index.html
+  - 🎨 style.css
+  - ⚡ script.js
+- Used `data-file` attributes to identify each file.
+- Used `querySelectorAll()` to select all file buttons.
+- Used `forEach()` to handle each file button.
+- Added click event listeners to the file buttons.
+- Used `dataset.file` to identify the selected file.
+- Created a `fileContents` object to store sample code for each file.
+- Connected the File Explorer with the Code Editor.
+- When a file is selected, its code is loaded into the Code Editor.
+- Added basic file-selection logging using `console.log()`.
+
+### Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Event Handling
+- JavaScript Objects
+- Arrays
+
+### Day 6 Result
+
+User clicks Create Workspace
+        ↓
+Workspace Opens
+        ↓
+File Explorer Appears
+        ↓
+User Selects a File
+        ↓
+JavaScript Identifies the File
+        ↓
+File Content is Retrieved
+        ↓
+Content is Loaded into Code Editor
+        ↓
+User Can View/Edit the Code
+
+### Example
+
+Click:
+
+📄 index.html
+
+↓
+
+HTML code appears in the Code Editor.
+
+Click:
+
+🎨 style.css
+
+↓
+
+CSS code appears in the Code Editor.
+
+Click:
+
+⚡ script.js
+
+↓
+
+JavaScript code appears in the Code Editor.
+
+### Important Note
+
+The current file contents are sample contents stored in JavaScript for learning and testing.
+
+Actual project files, file persistence and database-based file management will be implemented in later stages.
+
+### Development Status
+
+✅ Day 3 – CSS & UI completed
+
+✅ Day 4 – JavaScript & Basic Interactivity completed
+
+✅ Day 5 – Code Execution & Output Handling completed
+
+✅ Day 6 – File Explorer & File Selection completed
+
