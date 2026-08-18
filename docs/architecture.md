@@ -363,3 +363,98 @@ Actual project files, file persistence and database-based file management will b
 
 ✅ Day 6 – File Explorer & File Selection completed
 
+
+# Day 7 – CodeSync Development Progress
+
+## 💾 Day 7 – File Editing & Change Tracking
+
+### What We Did
+- Added the `currentFile` variable to keep track of the file currently being edited.
+- Updated the file-selection functionality to identify the selected file.
+- Connected the Code Editor with the selected file.
+- Added the `input` event to detect changes made by the user while typing.
+- Saved the updated editor content back into the `fileContents` object.
+- Made CodeSync remember file changes when switching between files.
+- Tested editing `index.html`, switching to another file, and returning to `index.html`.
+- Verified that the user's changes remain in the editor.
+
+### Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Event Handling
+- JavaScript Objects
+
+### Day 7 Result
+
+Select a File
+        ↓
+Current File is Stored
+        ↓
+File Content Loads into Editor
+        ↓
+User Edits Code
+        ↓
+Input Event Detects Changes
+        ↓
+Updated Code is Stored
+        ↓
+User Switches to Another File
+        ↓
+User Returns to Previous File
+        ↓
+Updated Code is Restored
+
+### Example
+
+User selects:
+
+📄 index.html
+
+↓
+
+Changes:
+
+<h1>Welcome to CodeSync</h1>
+
+to:
+
+<h1>Hello Team CodeSync!</h1>
+
+↓
+
+Switches to:
+
+🎨 style.css
+
+↓
+
+Returns to:
+
+📄 index.html
+
+↓
+
+The updated HTML code is still available.
+
+### Important Note
+
+The current changes are stored temporarily in JavaScript memory using the `fileContents` object.
+
+The changes are not yet permanently saved to a database or server.
+
+Permanent file storage and real-time synchronization between multiple users will be implemented in later stages.
+
+### Development Status
+
+✅ Day 3 – CSS & UI completed
+
+✅ Day 4 – JavaScript & Basic Interactivity completed
+
+✅ Day 5 – Code Execution & Output Handling completed
+
+✅ Day 6 – File Explorer & File Selection completed
+
+✅ Day 7 – File Editing & Change Tracking completed
+

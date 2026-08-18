@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const fileButtons =
         document.querySelectorAll(".file-btn");
-
+    let currentFile = null;
 
     // Code displayed when a file is selected
 
@@ -78,6 +78,8 @@ h1 {
             const selectedFile =
                 button.dataset.file;
 
+            currentFile = selectedFile;
+
             codeEditor.value =
                 fileContents[selectedFile];
 
@@ -86,6 +88,24 @@ h1 {
             console.log("Opened file:", selectedFile);
 
         });
+
+    });
+
+    codeEditor.addEventListener("input", function () {
+
+        if (currentFile !== null) {
+
+            fileContents[currentFile] =
+                codeEditor.value;
+            console.log("CURRENT FILE:", currentFile);
+            console.log("CURRENT CONTENT:", fileContents[currentFile]);
+
+            console.log(
+                "Saved changes to:",
+                currentFile
+            );
+
+        }
 
     });
 
@@ -117,44 +137,67 @@ h1 {
     // Run Code
     // ===============================
 
+
+
     runCodeBtn.addEventListener("click", function () {
 
         const code = codeEditor.value;
 
         codeOutput.textContent = "";
 
-        const oldLog = console.log;
+        // Run JavaScript
+        if (currentFile === "script.js") {
 
-        console.log = function (message) {
+            const oldLog = console.log;
 
-            codeOutput.textContent +=
-                message + "\n";
+            console.log = function (message) {
 
-        };
+                codeOutput.textContent +=
+                    message + "\n";
 
+            };
 
-        try {
+            try {
 
-            const result = eval(code);
+                const result = eval(code);
 
-            if (result !== undefined) {
+                if (result !== undefined) {
+                    codeOutput.textContent += result;
+                }
 
-                codeOutput.textContent += result;
+            } catch (error) {
+
+                codeOutput.textContent =
+                    "Error: " + error.message;
 
             }
 
-        } catch (error) {
+            console.log = oldLog;
+        }
 
-            codeOutput.textContent =
-                "Error: " + error.message;
+        // Run HTML
+        else if (currentFile === "index.html") {
+
+            codeOutput.innerHTML = code;
 
         }
 
+        // CSS
+        else if (currentFile === "style.css") {
 
-        console.log = oldLog;
+            codeOutput.textContent =
+                "CSS file selected. CSS cannot be executed directly.";
+
+        }
+
+        else {
+
+            codeOutput.textContent =
+                "Please select a file first.";
+
+        }
 
     });
-
 
     // ===============================
     // Team Members
