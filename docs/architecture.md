@@ -458,3 +458,105 @@ Permanent file storage and real-time synchronization between multiple users will
 
 ✅ Day 7 – File Editing & Change Tracking completed
 
+
+
+# Day 8 – CodeSync Development Progress
+
+## 💾 Day 8 – Local Storage & Persistent File Saving
+
+### What We Did
+- Added browser-based file storage using `localStorage`.
+- Saved the updated file contents whenever the user edits code.
+- Used the `input` event to detect changes in the Code Editor.
+- Used `JSON.stringify()` to convert the file contents object into storable data.
+- Used `localStorage.setItem()` to save the file data in the browser.
+- Used `localStorage.getItem()` to retrieve previously saved files.
+- Used `JSON.parse()` to convert the stored data back into a JavaScript object.
+- Used `Object.assign()` to restore the saved file contents.
+- Made CodeSync preserve file changes even after refreshing the webpage.
+
+### Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Local Storage
+- JSON
+- JavaScript Objects
+
+### Day 8 Result
+
+User edits a file
+        ↓
+Input event detects the change
+        ↓
+Updated content stored in fileContents
+        ↓
+JSON.stringify()
+        ↓
+localStorage
+        ↓
+User refreshes the webpage
+        ↓
+localStorage.getItem()
+        ↓
+JSON.parse()
+        ↓
+Saved file contents restored
+        ↓
+User opens the file
+        ↓
+Previous changes appear in the Code Editor
+
+### Example
+
+User edits:
+
+📄 index.html
+
+From:
+
+<h1>Welcome to CodeSync</h1>
+
+To:
+
+<h1>Hello Team CodeSync!</h1>
+
+↓
+
+CodeSync saves the updated content in Local Storage.
+
+↓
+
+After refreshing the webpage:
+
+📄 index.html
+
+↓
+
+<h1>Hello Team CodeSync!</h1>
+
+The changes are still available.
+
+### Important Note
+
+The current file persistence uses browser Local Storage for learning and frontend development.
+
+The final CodeSync project will use a backend and database for permanent project/file storage.
+
+Real-time file synchronization between multiple users will be implemented later using WebSocket.
+
+### Development Status
+
+✅ Day 3 – CSS & UI completed
+
+✅ Day 4 – JavaScript & Basic Interactivity completed
+
+✅ Day 5 – Code Execution & Output Handling completed
+
+✅ Day 6 – File Explorer & File Selection completed
+
+✅ Day 7 – File Editing & Change Tracking completed
+
+✅ Day 8 – Local Storage & Persistent File Saving completed
+

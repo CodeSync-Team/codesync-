@@ -65,7 +65,22 @@ h1 {
 
         "script.js": `console.log("Hello from CodeSync");`
     };
+    // Load saved files from Local Storage
 
+    const savedFiles =
+        localStorage.getItem("codeSyncFiles");
+
+    if (savedFiles) {
+
+        const savedFileContents =
+            JSON.parse(savedFiles);
+
+        Object.assign(
+            fileContents,
+            savedFileContents
+        );
+
+    }
 
     // ===============================
     // File Selection
@@ -97,8 +112,11 @@ h1 {
 
             fileContents[currentFile] =
                 codeEditor.value;
-            console.log("CURRENT FILE:", currentFile);
-            console.log("CURRENT CONTENT:", fileContents[currentFile]);
+
+            localStorage.setItem(
+                "codeSyncFiles",
+                JSON.stringify(fileContents)
+            );
 
             console.log(
                 "Saved changes to:",
