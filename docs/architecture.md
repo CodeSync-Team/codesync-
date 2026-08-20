@@ -560,3 +560,90 @@ Real-time file synchronization between multiple users will be implemented later 
 
 ✅ Day 8 – Local Storage & Persistent File Saving completed
 
+# Day 9 – CodeSync Development Progress
+
+## 🌐 Day 9 – Backend & HTTP Fundamentals
+
+### What We Learned
+- Understood why CodeSync needs a backend.
+- Learned the difference between frontend, backend and database.
+- Learned how the frontend communicates with the backend.
+- Understood the concept of HTTP requests and responses.
+- Learned what an API is and why CodeSync needs APIs.
+- Learned the purpose of HTTP methods:
+  - GET – retrieve data
+  - POST – create data
+  - PUT – update data
+  - DELETE – remove data
+- Understood how files will eventually be saved through the backend.
+- Understood the role of Spring Boot as the future CodeSync backend.
+- Understood how the backend will communicate with the database.
+
+### Technologies / Concepts Learned
+- Frontend
+- Backend
+- Server
+- API
+- HTTP
+- HTTP Request
+- HTTP Response
+- GET
+- POST
+- PUT
+- DELETE
+- Spring Boot
+- Database
+
+### Day 9 Result
+
+CodeSync Frontend
+        ↓
+HTTP Request
+        ↓
+Spring Boot Backend
+        ↓
+API
+        ↓
+Database
+        ↓
+HTTP Response
+        ↓
+CodeSync Frontend
+
+### CodeSync Example
+
+User edits index.html
+        ↓
+Frontend sends a request
+        ↓
+Backend receives the request
+        ↓
+Backend processes the file data
+        ↓
+Database stores the data
+        ↓
+Backend sends a response
+        ↓
+Frontend receives the response
+
+### Important Note
+
+Today we only learned the backend and HTTP architecture.
+
+The Spring Boot backend, APIs and database will be implemented in the upcoming development stages.
+
+### Development Status
+
+✅ Day 3 – CSS & UI completed
+
+✅ Day 4 – JavaScript & Basic Interactivity completed
+
+✅ Day 5 – Code Execution & Output Handling completed
+
+✅ Day 6 – File Explorer & File Selection completed
+
+✅ Day 7 – File Editing & Change Tracking completed
+
+✅ Day 8 – Local Storage & Persistent File Saving completed
+
+✅ Day 9 – Backend & HTTP Fundamentals completed
