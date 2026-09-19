@@ -647,3 +647,39 @@ The Spring Boot backend, APIs and database will be implemented in the upcoming d
 ✅ Day 8 – Local Storage & Persistent File Saving completed
 
 ✅ Day 9 – Backend & HTTP Fundamentals completed
+
+# Day 10 – Backend Setup with Spring Boot
+
+## Objective
+
+Set up the CodeSync backend using Java and Spring Boot and create the first REST API.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Maven
+- Spring Web
+- REST API
+
+## Backend Project Structure
+
+```text
+CodeSync
+│
+├── frontend
+│
+└── backend
+    └── backend
+        ├── src
+        │   └── main
+        │       └── java
+        │           └── co
+
+        │               └── codesync
+        │                   └── backend
+        │                       ├── BackendApplication.java
+        │                       └── HelloController.java
+        │
+        ├── pom.xml
+        └── mvnw.cmd
