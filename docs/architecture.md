@@ -683,3 +683,25 @@ CodeSync
         │
         ├── pom.xml
         └── mvnw.cmd
+
+# Day 11 – Frontend and Backend Communication
+
+## Objective
+
+Connect the CodeSync frontend with the Spring Boot backend using a REST API.
+
+## Work Completed
+
+- Created a new backend API endpoint.
+- Learned how `@GetMapping` connects a URL to a Java method.
+- Created the `/api/status` GET endpoint.
+- Tested the backend API using the browser.
+- Connected the frontend JavaScript to the Spring Boot backend using `fetch()`.
+- Identified and fixed the CORS issue between frontend and backend.
+- Added `@CrossOrigin` to allow frontend requests.
+- Successfully established frontend-to-backend communication.
+
+## API Created
+
+```text
+GET /api/status
