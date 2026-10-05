@@ -705,3 +705,27 @@ Connect the CodeSync frontend with the Spring Boot backend using a REST API.
 
 ```text
 GET /api/status
+
+
+# Day 12 – Workspace API and Frontend-Backend Integration
+
+## Objective
+
+Connect the CodeSync Create Workspace feature with the Spring Boot backend using a REST API.
+
+## Work Completed
+
+- Created the Workspace REST API.
+- Learned about POST requests.
+- Connected the Create Workspace frontend action to the backend.
+- Used JavaScript `fetch()` to send a POST request.
+- Tested the workspace API successfully.
+- Verified frontend-to-backend communication.
+- Confirmed the backend response is received by the frontend.
+
+## Workspace API
+
+The following REST API was created:
+
+```text
+POST /api/workspaces
